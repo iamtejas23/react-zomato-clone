@@ -1,0 +1,44 @@
+.hero {
+    background-image: url('../../assets/banner1.jpg'); /* Replace 'path/to/your/hero-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    position: relative; /* Add this line */
+  }
+  
+  /* Adjust the position of Navbar */
+ 
+  
+  .hero-content {
+    color: #fff;
+    text-align: center;
+    margin-top: 10%;
+    
+  }
+  
+  .hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: 900;
+  }
+  
+  .hero-content p {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content button {
+    background-color: #ff3e6c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-content button:hover {
+    background-color: #d6325c;
+  }
+  

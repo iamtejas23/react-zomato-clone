@@ -1,0 +1,143 @@
+.down-app {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    
+    background-color: rgb(255, 251, 247);
+}
+
+
+  .app-input{
+    gap: 1rem;
+    display: flex;
+  }
+
+  .app-input button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #EF4F5F;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .app-input input {
+    border: 2px solid transparent;
+    width: 15em;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    transition: all 0.5s;
+  }
+  
+  .down-img{
+    gap: 1rem;
+    display: flex;
+    
+  }
+
+  .app-im {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: end;
+  }
+  
+  .app-im img {
+    max-width: 50%;
+    height: auto;
+  }
+  
+  .app-text {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 100px; 
+  }
+
+    .app-text h2 {
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+
+    .app-text p {
+        margin-bottom: 40px;
+    }
+
+    .rad-app{
+        display: flex;
+        margin-bottom: 20px; ;
+    }
+
+    .rad input[type="radio"] {
+        color: #f1c40f;
+        gap: 1rem;
+        margin-left: 1rem; 
+    }
+  
+  .app-btn button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .app-btn p{
+    color: #ccc;
+  }
+  
+  /* Media query for screens smaller than 768px */
+  @media screen and (max-width: 768px) {
+    .down-app {
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .app-im {
+      margin-bottom: 10px;
+    }
+  
+    .app-btn button {
+      font-size: 14px;
+    }
+  }
+  
+  /* Flex layout similar to Zomato */
+  @media screen and (min-width: 768px) {
+    .down-app {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .app-im {
+      width: 40%;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  
+    .app-text {
+      width: 50%;
+      text-align: left;
+    }
+  
+    .app-btn {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .app-btn img{
+        width: 20%;
+        height: auto;
+    }
+  
+    .app-btn button {
+      padding: 15px 30px;
+      font-size: 18px;
+    }
+  }
+  

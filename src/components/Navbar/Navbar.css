@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menulinks{
+    margin-top: 1rem; ;
+  }
+
+  .navlinks {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    margin: 1rem;
+    
+  }
+
+    .navlinks a{
+        text-decoration: none;
+    }
