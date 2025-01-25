@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="hero">
       <Navbar /> {/* Include Navbar here */}
       <div className="hero-content">
-        <h1>Fomato V2</h1>
+        <h1>Fomato V3</h1>
         <p>Discover the best food & drinks near you</p>
         <SearchBar />
       </div>
