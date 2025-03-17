@@ -10,11 +10,11 @@
     border: 1px solid #cccccc93;
     border-radius: 10px;
     max-width: 50%;
-    height:2rem; ;
+    height:2rem; 
   }
   
   .search-bar button {
-    background-color: #f3725b;
+    background-color: #fff;
     color: white;
     border: none;
     border-radius: 0 5px 5px 0;
