@@ -7,7 +7,7 @@
 **App Port:** 3000  
 **Date:** April 2026
 
-![Jenkins Pipeline](https://www.awesomescreenshot.com/image/60127826?key=443a8544325261a70e0cd7421c2cb6b7)
+![Jenkins Pipeline](https://awesomescreenshot.s3.amazonaws.com/image/3503735/60127826-9630ac669de16106fda2ee09544bd3aa.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20260429%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260429T100244Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=09cbe0712e2ae83810708e7c3364d67441c0b5dac6fce4d319296c15d737c07f)
 
 ---
 
