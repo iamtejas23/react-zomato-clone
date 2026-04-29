@@ -7,7 +7,7 @@
 **App Port:** 3000  
 **Date:** April 2026
 
-![description](https://www.awesomescreenshot.com/image/60127826?key=443a8544325261a70e0cd7421c2cb6b7)
+![Jenkins Pipeline](https://www.awesomescreenshot.com/image/60127826?key=443a8544325261a70e0cd7421c2cb6b7)
 
 ---
 
