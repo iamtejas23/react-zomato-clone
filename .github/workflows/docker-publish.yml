@@ -33,7 +33,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/react-zomato-clone:sha-${{ steps.sha.outputs.short }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/react-zomato-clone:build-${{ github.run_number }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/zomato-clone:sha-${{ steps.sha.outputs.short }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/zomato-clone:build-${{ github.run_number }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
