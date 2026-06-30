@@ -1,77 +1,93 @@
 import React from 'react';
-import './Footer.css';
+import { IoIosArrowDown } from 'react-icons/io';
+import { IoMdRestaurant } from 'react-icons/io';
+import { useApp } from '../../context/AppContext';
 import india from '../../assets/india.png';
 import glob from '../../assets/globe.svg';
-import { IoIosArrowDown } from 'react-icons/io';
+import './Footer.css';
+
+const FOOTER_LINKS = [
+  {
+    heading: 'About Fomato',
+    links: ['Blog', 'Who We Are', 'Work With Us', 'Investor Relations', 'Press Kit', 'Contact Us'],
+  },
+  {
+    heading: 'Partners',
+    links: ['Fomato', 'Blinkit', 'Feeding India', 'Hyperpure', 'Fomaland'],
+  },
+  {
+    heading: 'For Restaurants',
+    links: ['Partner With Us', 'Apps For You', 'Business Blog', 'Merchant Support'],
+  },
+  {
+    heading: 'Learn More',
+    links: ['Privacy Policy', 'Security', 'Terms & Conditions', 'Sitemap'],
+  },
+  {
+    heading: 'Social',
+    links: ['LinkedIn', 'Instagram', 'Twitter / X', 'YouTube', 'Facebook'],
+  },
+];
 
 const Footer = () => {
+  const { addToast } = useApp();
+
   return (
-    <div>
-       
-        <footer>
-  <div className="footsec">
-    <div className="classsec">
-    <h2>Fomato</h2>
-    <div className="demo">
-        <div className='ping'>  <img src={india} alt="des" />  India <IoIosArrowDown /> </div>
-        <div className='ping'> <img src={glob} alt="blog" /> English <IoIosArrowDown /> </div>
-    </div>
-    </div>
-  <div class="container-foot">
-    
-    <div class="footer-column">
-      <h3>About Zomato</h3>
-      <ul>
-        <li><a href="/">Blog</a></li>
-        <li><a href="/">Who We Are</a></li>
-        <li><a href="/">Work With Us</a></li>
-        <li><a href="/">Investor Relations</a></li>
-        <li><a href="/">Report Fraud</a></li>
-        <li><a href="/">Press Kit</a></li>
-        <li><a href="/">Contact Us</a></li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <h3>Zomaverse</h3>
-      <ul>
-        <li><a href="/">Zomato</a></li>
-        <li><a href="/">Blinkit</a></li>
-        <li><a href="/">Feeding India</a></li>
-        <li><a href="/">Hyperpure</a></li>
-        <li><a href="/">Zomaland</a></li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <h3>For Restaurants</h3>
-      <ul>
-        <li><a href="/">Partner With Us</a></li>
-        <li><a href="/">Apps For You</a></li>
-      </ul>
-    </div>
-    <div class="footer-column">
-      <h3>Learn More</h3>
-      <ul>
-        <li><a href="/">Privacy</a></li>
-        <li><a href="/">Security</a></li>
-        <li><a href="/">Terms</a></li>
-        <li><a href="/">Sitemap</a></li>
-      </ul>
-    </div>
-        <div class="footer-column">
-            <h3>Social Links</h3>
-            <ul>
-                <li><a href="/">Facebook</a></li>
-                <li><a href="/">Twitter</a></li>
-                <li><a href="/">Instagram</a></li>
-            </ul>
-           
+    <footer className="footer" role="contentinfo">
+      <div className="footer__inner">
+        {/* Top bar */}
+        <div className="footer__top">
+          <div className="footer__brand">
+            <IoMdRestaurant className="footer__brand-icon" aria-hidden="true" />
+            <span className="footer__brand-text">Fomato</span>
+          </div>
+          <div className="footer__locale">
+            <button
+              className="footer__locale-btn"
+              onClick={() => addToast('Language/region selector coming soon!', 'info')}
+              aria-label="Change country: India"
+            >
+              <img src={india} alt="" className="footer__locale-flag" />
+              India
+              <IoIosArrowDown size={14} aria-hidden="true" />
+            </button>
+            <button
+              className="footer__locale-btn"
+              onClick={() => addToast('Language selector coming soon!', 'info')}
+              aria-label="Change language: English"
+            >
+              <img src={glob} alt="" className="footer__locale-flag footer__locale-flag--globe" />
+              English
+              <IoIosArrowDown size={14} aria-hidden="true" />
+            </button>
+          </div>
         </div>
-    </div>
-  </div>
-</footer>
-    
-    </div>
-  )
-}
+
+        <div className="footer__divider" aria-hidden="true" />
+
+        {/* Links grid */}
+        <nav className="footer__grid" aria-label="Footer navigation">
+          {FOOTER_LINKS.map(col => (
+            <div key={col.heading} className="footer__col">
+              <h3 className="footer__col-heading">{col.heading}</h3>
+              <ul className="footer__list">
+                {col.links.map(link => (
+                  <li key={link}>
+                    <button
+                      className="footer__link"
+                      onClick={() => addToast(`${link} coming soon!`, 'info')}
+                    >
+                      {link}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </nav>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

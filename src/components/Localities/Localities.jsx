@@ -1,41 +1,50 @@
 import React from 'react';
+import { FiArrowRight, FiMapPin } from 'react-icons/fi';
+import { useApp } from '../../context/AppContext';
+import { localities } from '../../data/mockData';
 import './Localities.css';
-import { MdOutlineArrowRight } from 'react-icons/md';
-// import { MdOutlineArrowDropDown } from 'react-icons/md';
-
-
-const locations = [
-    { name: 'Lower Parel', count: 455 },
-    { name: 'Powai', count: 416 },
-    { name: 'Malad West', count: 884 },
-    { name: 'Borivali West', count: 644 },
-    { name: 'Bandra Kurla Complex', count: 142 },
-    { name: 'Vashi', count: 628 },
-    { name: 'Fort', count: 266 },
-    { name: 'Juhu', count: 234 },
-    { name: 'see more'  }
-  ];
 
 const Localities = () => {
-  return (
-    <><div className='localities-con'>
-          <h2>Popular localities in and around <span>Mumbai</span></h2>
-      </div><div className="container-local">
-              {locations.map((location, index) => (
-                  <div className="card-local" key={index}>
-                      <div>
-                      <h2>{location.name}</h2>
-                      <p>{location.count} places</p> 
-                      </div>
-                      <div>
-                      <MdOutlineArrowRight size={24} />
-                      </div>
-                  </div>
-              ))}
-              
-          </div></>
+  const { addToast } = useApp();
 
-  )
-}
+  return (
+    <section className="localities section" aria-label="Popular localities">
+      <div className="container">
+        <div className="section-header">
+          <div>
+            <h2 className="section-title">
+              Popular localities in <span className="localities__city">Kolhapur</span>
+            </h2>
+            <p className="section-subtitle">Browse restaurants by neighbourhood</p>
+          </div>
+          <button className="section-link" onClick={() => addToast('All localities coming soon!', 'info')}>
+            View all <FiArrowRight size={15} />
+          </button>
+        </div>
+
+        <div className="localities__grid">
+          {localities.map((loc, i) => (
+            <button
+              key={i}
+              className="loc-card"
+              style={{ animationDelay: `${i * 40}ms` }}
+              onClick={() => addToast(`Exploring ${loc.name}…`, 'info')}
+              aria-label={`${loc.name} — ${loc.count} restaurants`}
+            >
+              <div className="loc-card__icon" aria-hidden="true">
+                <FiMapPin size={16} />
+              </div>
+              <div className="loc-card__text">
+                <span className="loc-card__name">{loc.name}</span>
+                <span className="loc-card__count">{loc.count} places</span>
+              </div>
+              <FiArrowRight size={16} className="loc-card__arrow" aria-hidden="true" />
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Localities;

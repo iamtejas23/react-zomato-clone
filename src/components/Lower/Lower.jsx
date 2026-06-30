@@ -1,16 +1,17 @@
 import React from 'react';
 import './Lower.css';
 
-const Lower = () => {
-  return (
-    <div>
-        <div className="lower">
- <hr className='hrline' />
-        <p>Created By Tejas Mane All trademarks are properties of their respective owners. 2008-2024 © Zomato™ Ltd. All rights reserved.</p>
-        
+const Lower = () => (
+  <div className="lower">
+    <div className="lower__inner">
+      <p className="lower__text">
+        Built with ❤️ by <strong>Tejas Mane</strong> — Portfolio Project
+      </p>
+      <p className="lower__copy">
+        © {new Date().getFullYear()} Fomato™. All trademarks are properties of their respective owners.
+      </p>
     </div>
-    </div>
-  )
-}
+  </div>
+);
 
 export default Lower;
