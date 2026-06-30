@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: zomato-clone
-        image: iamtejas23/zomato-clone:latest # Docker Hub image
-        imagePullPolicy: Always
+        image: iamtejas23/zomato-clone:sha-000000 # replaced by CI with sha-<short-sha>
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
